@@ -99,6 +99,28 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'unicode'
 
+"主题 solarized
+Bundle 'altercation/vim-colors-solarized'
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+
+" for markdown
+Bundle 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled=1
+
+" for javascript
+Bundle 'pangloss/vim-javascript'
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+
+" for coffeescript
+Bundle 'kchmck/vim-coffee-script'
+
+"for jquery
+Bundle 'nono/jquery.vim'
 
 filetype plugin indent on     " required
 "
@@ -118,7 +140,6 @@ filetype plugin indent on     " required
 syntax enable
 syntax on
 "主题和颜色展示
-set background=dark
 colorscheme solarized
-
+set background=dark
 
