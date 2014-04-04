@@ -13,7 +13,7 @@ set history=2000
 "显示行号
 set number
 "取消换行
-set nowrap                    
+set nowrap
 "显示当前的行号列号
 set ruler
 "突出显示当前行/列
@@ -85,8 +85,8 @@ let g:Powerline_symbols = 'unicode'
 Bundle 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 
 " for markdown
 Bundle 'plasticboy/vim-markdown'
@@ -125,7 +125,7 @@ filetype plugin indent on     " required
 "开启语法高亮
 syntax enable
 syntax on
-"主题和颜色展示
+"主题和颜色展示 for solarized
 colorscheme solarized
 set background=dark
 
