@@ -7,10 +7,7 @@ cd $BASEDIR
 CURRENT_DIR=`pwd`
 
 lnif() {
-    if [ ! -e "$2" ] ; then
-        ln -s "$1" "$2"
-    fi
-    if [ -L "$2" ] ; then
+    if [ -e "$1" ] ; then
         ln -sf "$1" "$2"
     fi
 }
@@ -26,7 +23,7 @@ lnif "$CURRENT_DIR/vimrc" $HOME/.vimrc
 lnif "$CURRENT_DIR/" $HOME/.vim
 
 
-if [ ! -e "$CURRENT_DIR/vundle" ]; then
+if [ ! -e "$CURRENT_DIR/bundle/vundle" ]; then
     echo "Installing Vundle"
     git clone https://github.com/gmarik/vundle.git "$CURRENT_DIR/bundle/vundle"
 fi
