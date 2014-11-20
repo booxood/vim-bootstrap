@@ -51,6 +51,26 @@ let g:mapleader = ','
 inoremap kj <Esc>
 
 map Y y$
+"==========================================
+"=========== insert mode hot key  自定义快捷键
+"==========================================
+
+imap <C-h> <Left>
+imap <C-l> <Right>
+imap <C-j> <Down>
+imap <C-k> <Up>
+
+imap <C-a> <Home>
+imap <C-e> <End>
+
+imap <C-x> <Del>
+" imap <C-f> <BS>
+
+" command-T window
+" let g:CommandTCursorLeftMap  = ['<Left>',  '<C-h>']
+" let g:CommandTCursorRightMap = ['<Right>', '<C-l>']
+" let g:CommandTBackspaceMap   = ['<BS>',    '<C-f>']
+" let g:CommandTDeleteMap      = ['<Del>',   '<C-d>']
 
 "==========================================
 "===========  begin  bundle ===============
