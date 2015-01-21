@@ -7,6 +7,8 @@ set autoread
 "取消备份
 set nobackup
 set noswapfile
+"退出vim后 内容显示在终端屏幕
+set t_ti= t_te=
 
 "history存储长度
 set history=2000
@@ -66,6 +68,9 @@ imap <C-e> <End>
 imap <C-x> <Del>
 " imap <C-f> <BS>
 
+imap <C-d> <PageDown>
+imap <C-u> <PageUp>
+
 " command-T window
 " let g:CommandTCursorLeftMap  = ['<Left>',  '<C-h>']
 " let g:CommandTCursorRightMap = ['<Right>', '<C-l>']
@@ -88,7 +93,7 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
-"目录导航
+" 目录导航
 Bundle 'scrooloose/nerdtree'
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
@@ -97,11 +102,11 @@ let NERDTreeHighlightCursorline=1
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 
-"状态栏增强展示
+" 状态栏增强展示
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'unicode'
 
-"主题 solarized
+" 主题 solarized
 Bundle 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
@@ -121,12 +126,19 @@ let g:html_indent_style1 = "inc"
 " for coffeescript
 Bundle 'kchmck/vim-coffee-script'
 
-"for jquery
+" for jquery
 Bundle 'nono/jquery.vim'
 
-"for show no user whitespaces
+" for show no user whitespaces
 Bundle 'bronson/vim-trailing-whitespace'
 map <leader><space> :FixWhitespace<cr>
+
+" for search file
+Bundle 'kien/ctrlp.vim'
+
+" for tab manage
+Bundle 'szw/vim-ctrlspace'
+
 
 filetype plugin indent on     " required
 "
