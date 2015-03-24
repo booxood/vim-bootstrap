@@ -25,6 +25,8 @@ set cursorline
 set showcmd
 "Show current mode
 set showmode
+"设置滚屏
+set scrolloff=20
 
 " 代码折叠
 set foldenable
@@ -134,9 +136,17 @@ Bundle 'bronson/vim-trailing-whitespace'
 map <leader><space> :FixWhitespace<cr>
 
 " for search file
+" hot key:
+"       ctrl + p
 Bundle 'kien/ctrlp.vim'
 
 " for tab manage
+" hot key:
+"       ctrl + space
+"           ctrl + t    create new tab
+"           [, ]        select tab
+"           =           rename tab
+"           h, j, k, l  select file
 Bundle 'szw/vim-ctrlspace'
 
 
